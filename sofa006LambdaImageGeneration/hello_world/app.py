@@ -11,6 +11,7 @@ def lambda_handler(event, context):
     
     body = json.loads(event['body'])
     prompt = body['prompt']
+    
     prompt_request = body.get("prompt", "Placeholder text is non is provided")
     
     ##except Exception as e:

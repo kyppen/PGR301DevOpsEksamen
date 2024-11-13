@@ -21,4 +21,4 @@ jobs:
           aws-region: us-east-1
       - run: sam build --use-container
       - run: sam package --s3-bucket pgr301-bucket-sofa006 --output-template-file packaged.yaml
-      - run: sam deploy --no-confirm-changeset --template-file packaged.yaml --stack-name sofastack --capabilities CAPABILITY_IAM
+      - run: sam deploy --no-fail-on-empty-changeset --no-confirm-changeset --template-file packaged.yaml --stack-name sofastack --capabilities CAPABILITY_IAM
