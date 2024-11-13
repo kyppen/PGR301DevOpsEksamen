@@ -17,10 +17,6 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 s3_bucket = "pgr301-bucket-sofa006"
 confirm_changeset = true
-resolve_s3 = true
-
-[default.package.parameters]
-resolve_s3 = true
 
 [default.sync.parameters]
 watch = true
