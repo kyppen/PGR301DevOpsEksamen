@@ -44,7 +44,7 @@ Resources:
     Metadata:
       SamResourceId: SofaImageGenerationFunction
 Outputs:
-  HelloWorldApi:
+  SofaImageGenerationApi:
     Description: API Gateway endpoint URL for Prod stage for the image generation
       function
     Value:
