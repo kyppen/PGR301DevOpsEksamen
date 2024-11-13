@@ -18,7 +18,7 @@ Resources:
   SofaImageGenerationFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-sam-cli-managed-default-samclisourcebucket-svafysmncg4w/4d7b7b674a4ca783582ce4976c01ca33
+      CodeUri: s3://pgr301-bucket-sofa006/3e9b726c621650604092837838617991
       Handler: app.lambda_handler
       Runtime: python3.8
       Environment:
@@ -43,23 +43,6 @@ Resources:
             Method: post
     Metadata:
       SamResourceId: SofaImageGenerationFunction
-  ApplicationResourceGroup:
-    Type: AWS::ResourceGroups::Group
-    Properties:
-      Name:
-        Fn::Sub: ApplicationInsights-SAM-${AWS::StackName}
-      ResourceQuery:
-        Type: CLOUDFORMATION_STACK_1_0
-    Metadata:
-      SamResourceId: ApplicationResourceGroup
-  ApplicationInsightsMonitoring:
-    Type: AWS::ApplicationInsights::Application
-    Properties:
-      ResourceGroupName:
-        Ref: ApplicationResourceGroup
-      AutoConfigurationEnabled: 'true'
-    Metadata:
-      SamResourceId: ApplicationInsightsMonitoring
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for the image generation
