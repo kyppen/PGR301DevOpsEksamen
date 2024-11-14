@@ -58,7 +58,7 @@ resource "aws_lambda_function" "sofa_image_lambda_function" {
 
   environment {
     variables = {
-      BUCKET_NAME = "pgr301-couch-explorers"
+      BUCKET_NAME = "pgr301-couch-explorers/5/images"
     }
   }
 }
