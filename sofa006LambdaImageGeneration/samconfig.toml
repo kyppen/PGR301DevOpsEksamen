@@ -14,6 +14,7 @@ parallel = true
 [default.validate.parameters]
 lint = true
 
+
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
 s3_bucket = "pgr301-bucket-sofa006"
