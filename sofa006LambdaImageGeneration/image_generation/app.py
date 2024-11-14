@@ -61,6 +61,6 @@ def lambda_handler(event, context):
         }
     except Exception as e:
         return {
-            "statusCode": 69,
+            "statusCode": 400,
             "body": json.dumps({"message": "There was an issue"})
         }
