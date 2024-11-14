@@ -9,7 +9,7 @@ example prompt:
     "prompt": "beach scene"
 }
 <br />
-workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11836294979**
+workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11836419929**
 
 Oppgave 2:
 
