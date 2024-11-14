@@ -8,5 +8,10 @@ example prompt:
 {
     "prompt": "beach scene"
 }
+<br />
+
 Oppgave 2:
+
+
+
 
