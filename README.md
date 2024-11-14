@@ -9,6 +9,7 @@ example prompt:
     "prompt": "beach scene"
 }
 <br />
+workflow:
 
 Oppgave 2:
 
