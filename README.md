@@ -2,7 +2,7 @@
 
 Oppgave 1:
 HTTP post endpunkt<br />
-**https://zfvpdzem42.execute-api.eu-west-1.amazonaws.com/Prod/generate/**
+**https://cd0auv7ta5.execute-api.eu-west-1.amazonaws.com/Prod/generate/**
 
 example prompt:
 {
