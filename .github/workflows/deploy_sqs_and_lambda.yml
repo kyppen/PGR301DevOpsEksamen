@@ -8,7 +8,7 @@ defaults:
   run:
     working-directory: ./infra
     
-jobs:
+jobs: # could split terraform plan and apply into seperate jobs
   terraform:
     runs-on: ubuntu-latest
     env:
@@ -17,7 +17,7 @@ jobs:
       AWS_REGION: eu-west-1
       STUDENT_NAME: "sofa006"
 
-    steps:
+    steps: 
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -32,7 +32,7 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
         
-      - name: Terraform Apply
+      - name: Terraform Apply # Apply only on main push
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
         
