@@ -10,6 +10,11 @@ defaults:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: eu-west-1
+      STUDENT_NAME: "sofa006"
 
     steps:
       - name: Checkout code
@@ -20,5 +25,10 @@ jobs:
         with:
           terraform_wrapper: false
     
+      - name: Terraform Init
+        run: terraform init
+        working-directory: infra 
+
       - name: Terraform Plan
         run: terraform plan
+        working-directory: infra 
