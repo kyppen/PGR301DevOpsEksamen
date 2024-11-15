@@ -27,5 +27,6 @@ jobs:
               AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             run: | 
                 docker build -t ${{ secrets.DOCKER_USERNAME }}/sofasqsqueue .
-                docker tag ${{ secrets.DOCKER_USERNAME }}/sofasqsqueue kyppen/sofasqsqueue:v1.1
-                docker push ${{ secrets.DOCKER_USERNAME }}/sofasqsqueue:v1.1
+                rev=$(git rev-parse --short HEAD)
+                docker tag ${{ secrets.DOCKER_USERNAME }}/sofasqsqueue kyppen/sofasqsqueue:$rev
+                docker push ${{ secrets.DOCKER_USERNAME }}/sofasqsqueue:$rev
