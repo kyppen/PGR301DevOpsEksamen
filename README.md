@@ -30,5 +30,12 @@ Metode for tag generering:<br/>
 https://github.com/glennbechdevops/spring-docker-dockerhub<br/>
 Methoden gjorde det enkelt å få unike tagger på alle images som ble lastet opp
 
+SQS_QUEUE_URL:<br/>
+**https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**
+Docker_Image:<br/>
+**kyppen/sofasqsqueue:76e2811**
+
+
+
 
 
