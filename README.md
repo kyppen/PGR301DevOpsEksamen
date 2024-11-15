@@ -3,10 +3,10 @@
 Oppgave 1:  
 HTTP post endpunkt  
 **https://cd0auv7ta5.execute-api.eu-west-1.amazonaws.com/Prod/generate/**
-```
-{  
-    "prompt": "beach scene"  
-}  
+```json
+{
+    "prompt": "man in the bushes of love"
+}    
 ```
 <br />
 workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11836419929**
