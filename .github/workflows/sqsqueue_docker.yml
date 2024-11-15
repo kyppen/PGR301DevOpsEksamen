@@ -4,6 +4,9 @@ on:
         branches:
             - main
 
+defaults:
+  run:
+    working-directory: ./java_sqs_client
 jobs:
     push_to_hub:
         name: Push to dockerhub
