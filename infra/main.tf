@@ -69,7 +69,7 @@ resource "aws_sns_topic" "sofa_alarm_notification" {
 resource "aws_sns_topic_subscription" "email_subscription" {
   topic_arn = aws_sns_topic.sofa_alarm_notification.arn
   protocol  = "email"
-  endpoint  = "fagerhus.sondre@gmail.com" # Replace with your email address
+  endpoint  = var.alarm_email # Replace with your email address
 }
 
 resource "aws_cloudwatch_metric_alarm" "sqs_oldest_message_age" {
