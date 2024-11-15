@@ -62,9 +62,38 @@ resource "aws_lambda_function" "sofa_image_lambda_function" {
     }
   }
 }
+resource "aws_sns_topic" "sofa_alarm_notification" {
+  name = "sofa_alarm_notification"
+}
 
+resource "aws_sns_topic_subscription" "email_subscription" {
+  topic_arn = aws_sns_topic.sofa_alarm_notification.arn
+  protocol  = "email"
+  endpoint  = "fagerhus.sondre@gmail.com" # Replace with your email address
+}
+
+resource "aws_cloudwatch_metric_alarm" "sqs_oldest_message_age" {
+  alarm_name          = "sofa_alarm"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 1
+  metric_name         = "ApproximateAgeOfOldestMessage"
+  namespace           = "AWS/SQS"
+  period              = 60
+  statistic           = "Maximum"
+  threshold           = 4 # 4 seconds
+  alarm_description   = "This alarm triggers when the age of the oldest message in the SQS queue exceeds 5 minutes."
+  actions_enabled     = true
+
+  dimensions = {
+    QueueName = "sofa_image_queue"
+  }
+  alarm_actions = [
+    aws_sns_topic.sofa_alarm_notification.arn, # Replace with your SNS topic ARN
+  ]
+  
+}
 resource "aws_lambda_event_source_mapping" "sqs_lambda_trigger" {
   event_source_arn = aws_sqs_queue.sofa_queue.arn
   function_name    = aws_lambda_function.sofa_image_lambda_function.arn
-  batch_size       = 10
+  batch_size       = 2
 }
