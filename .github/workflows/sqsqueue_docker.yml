@@ -28,4 +28,4 @@ jobs:
             run: | 
                 docker build -t kyppen/sofasqsqueue .
                 docker tag kyppen/sofasqsqueue kyppen/sofasqsqueue:v1.0
-                docker push your-dockerhub-username/my-app:v1.0
+                docker push kyppen/sofasqsqueue:v1.0
