@@ -21,5 +21,4 @@ jobs:
               AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             run: | 
                 docker build -t sofasqsqueue .
-                docker tag sofasqsqueue kyppen/sofasqsqueue
                 docker push kyppen/sofasqsqueue:sofasqsqueue
