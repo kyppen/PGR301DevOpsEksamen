@@ -25,15 +25,15 @@ direct push to main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/acti
 
 Oppgave 3:
 
-Metode for tag generering:<br/>
-**rev=$(git rev-parse --short HEAD)**<br/>
-https://github.com/glennbechdevops/spring-docker-dockerhub<br/>
+Metode for tag generering:  
+**rev=$(git rev-parse --short HEAD)**  
+https://github.com/glennbechdevops/spring-docker-dockerhub  
 Methoden gjorde det enkelt å få unike tagger på alle images som ble lastet opp
 
-SQS_QUEUE_URL:<br/>
-**https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**
-Docker_Image:<br/>
-**kyppen/sofasqsqueue:76e2811**
+SQS_QUEUE_URL:  
+**https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
+Docker_Image:  
+**kyppen/sofasqsqueue:76e2811**  
 
 
 
