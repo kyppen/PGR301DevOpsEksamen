@@ -69,7 +69,7 @@ resource "aws_sns_topic" "sofa_alarm_notification" {
 resource "aws_sns_topic_subscription" "email_subscription" {
   topic_arn = aws_sns_topic.sofa_alarm_notification.arn
   protocol  = "email"
-  endpoint  = var.alarm_email # Replace with your email address
+  endpoint  = var.alarm_email
 }
 
 resource "aws_cloudwatch_metric_alarm" "sqs_oldest_message_age" {
@@ -88,7 +88,7 @@ resource "aws_cloudwatch_metric_alarm" "sqs_oldest_message_age" {
     QueueName = "sofa_image_queue"
   }
   alarm_actions = [
-    aws_sns_topic.sofa_alarm_notification.arn, # Replace with your SNS topic ARN
+    aws_sns_topic.sofa_alarm_notification.arn,
   ]
   
 }
