@@ -33,6 +33,7 @@ SQS_QUEUE_URL:
 Docker_Image:  
 **kyppen/sofasqsqueue:76e2811**  
 
+Oppgave 4:
 
 
 
