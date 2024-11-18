@@ -81,7 +81,7 @@ resource "aws_cloudwatch_metric_alarm" "sqs_oldest_message_age" {
   period              = 60
   statistic           = "Maximum"
   threshold           = 4 # 4 seconds
-  alarm_description   = "This alarm triggers when the age of the oldest message in the SQS queue exceeds 5 minutes."
+  alarm_description   = "This is an overly sensitive alarm, it will trigger the oldest message is 4 seconds old"
   actions_enabled     = true
 
   dimensions = {
