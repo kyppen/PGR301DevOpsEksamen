@@ -35,11 +35,11 @@ resource "aws_iam_policy_attachment" "lambda_s3_policy_attach" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 }
 
-# Check the existence of AmazonBedrockFullAccess, replace if not available
+# Just giving bedrock access to everything
 resource "aws_iam_policy_attachment" "lambda_bedrock_policy_attach" {
   name       = "lambda_bedrock_policy_attach"
   roles      = [aws_iam_role.lambda_exec_role_sofa.name]
-  policy_arn = "arn:aws:iam::aws:policy/AmazonBedrockFullAccess"  # Verify this exists in your account
+  policy_arn = "arn:aws:iam::aws:policy/AmazonBedrockFullAccess" 
 }
 
 resource "aws_iam_policy_attachment" "lambda_sqs_policy_attach" {

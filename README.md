@@ -36,5 +36,23 @@ Docker_Image:
 Oppgave 4:
 
 
+Oppgave 5. Serverless, Function as a service vs Container-teknologi
 
 
+1: Automatisering og kontinuerlig levering (CI/CD)
+
+Mikrotjenster og serverless prøver å løse det samme problemet, hvordan kan man gjøre det enklest å jobbe sammen, rulle ut kode, skalere løsningen og generelt få det til å funke.  
+serverless tar prinsippende til mikrotjenster til det neste nivået. Vi separer ikke bare basert på funksjonalitet, men kan også gå så lagt at vi lager invidielle funksjoner som tjenester (lambda).  
+Det vil si at en cloud provider håntere mye av komplsiteten av utrullingen av systemet, dette har gitt oss tjenster som terraform (infrastructure as code) og Lambda funksjoner.  
+De vil håntere ting som oppdatering av servere, sikkerhets oppdateringer og ansvaret for at en tjenste alltid er tilgjengelig.  I Serverless vil bruker man verktøy i CI/CD på et mye høyere nivå en i mikrotjenste basert,  
+mikrotjenster er bedre når man trenger mer kontrol over systemet. 
+
+2: Observability (overvåkning)
+
+mikrotjenster vil man kjøre i conteinere der man overfører logs enten til en tjenste hvor det lagres, eller har en mer avansert løsning som ELK stack. I serverless tar man gjerne i bruk noe som cloudwatch for å få data.  
+Overvåking av mikrotjenster handler mye mer om CPU og minne, i serverless har dette mye mindre å si fordi tjenstene skalerer basert på nødvendighet, dette gjør at man får logging mye mer i form av funksjons call og ventetid.
+
+3: Skalerbarhet og kostnadskontroll
+
+Begge løsningene har både ulemper og fordeler i dette feltet så det er opptil utvikleren å få mest ut av løsningene.  
+Serverless vil håntere all skalering for deg på bekostning at du betaler for så mye resursser som du bruker. serverless vil håntere alt av servere imot at du betaler. 
