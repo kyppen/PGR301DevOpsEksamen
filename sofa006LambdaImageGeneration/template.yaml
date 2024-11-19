@@ -26,17 +26,18 @@ Resources:
       Environment:
         Variables:
           BUCKET_NAME: pgr301-couch-explorers
-      Policies:
-        - AWSLambdaBasicExecutionRole
-        - Statement:
-            - Effect: Allow
-              Action:
-                - "s3:PutObject"
-              Resource: "arn:aws:s3:::pgr301-couch-explorers/5/generated_images/*"
-            - Effect: Allow
-              Action:
-                - "bedrock:InvokeModel"
-              Resource: arn:aws:bedrock::us-east-1:244530008913:foundation-model/amazon.titan-image-generator-v1
+          Policies:
+          - AWSLambdaBasicExecutionRole
+          - Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:PutObject"
+                Resource: "arn:aws:s3:::pgr301-couch-explorers/5/generated_images/*"
+              - Effect: Allow
+                Action:
+                  - "bedrock:InvokeModel"
+                Resource: "arn:aws:bedrock:us-east-1:244530008913:foundation-model/amazon.titan-image-generator-v1"
+
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
