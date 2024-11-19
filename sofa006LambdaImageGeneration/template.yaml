@@ -50,6 +50,6 @@ Outputs:
   SofaImageGenerationAPI:
     Description: API Gateway endpoint URL for Prod stage for the image generation function
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/generate/"
-  SofaImageGenerationFunctionRole:
+  SofaImageGenerationFunction:
     Description: "maybe arn"
-    Value: !GetAtt SofaImageGenerationFunctionRole.arn
+    Value: !GetAtt SofaImageGenerationFunction.Arn
