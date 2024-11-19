@@ -21,6 +21,7 @@ s3_bucket = "pgr301-bucket-sofa006"
 confirm_changeset = true
 s3_prefix = "sofa006LambdaImageGeneration"
 image_repositories = []
+resolve_s3 = true
 
 
 [default.sync.parameters]
