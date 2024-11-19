@@ -1,6 +1,6 @@
 
 
-Oppgave 1:    
+Oppgave 1:  
 HTTP post endpunkt  
 **https://cd0auv7ta5.execute-api.eu-west-1.amazonaws.com/Prod/generate/**  
 ```json
@@ -8,7 +8,7 @@ HTTP post endpunkt
     "prompt": "man in the bushes of love"
 }    
 ```
-workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11836419929** 
+workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880** 
 
 Oppgave 2:  
 
