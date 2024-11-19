@@ -51,11 +51,30 @@ resource "aws_iam_policy_attachment" "lambda_s3_policy_attach" {
   policy_arn = aws_iam_policy.lambda_s3_put_object_policy.arn
 }
 # Just giving bedrock access to everything
+resource "aws_iam_policy" "lambda_bedrock_custom_policy" {
+  name        = "lambda_bedrock_custom_policy"
+  description = "Allows Lambda to perform specific Amazon Bedrock actions"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect   = "Allow"
+        Action   = [
+          "bedrock:InvokeModel"
+        ]
+        Resource = "arn:aws:bedrock:us-east-1:244530008913:foundation-model/amazon.titan-image-generator-v1"                    
+      }
+    ]
+  })
+}
+
 resource "aws_iam_policy_attachment" "lambda_bedrock_policy_attach" {
   name       = "lambda_bedrock_policy_attach"
   roles      = [aws_iam_role.lambda_exec_role_sofa.name]
-  policy_arn = "arn:aws:iam::aws:policy/AmazonBedrockFullAccess" 
+  policy_arn = aws_iam_policy.lambda_bedrock_custom_policy.arn
 }
+
 
 resource "aws_iam_policy_attachment" "lambda_sqs_policy_attach" {
   name       = "lambda_sqs_policy_attach"
