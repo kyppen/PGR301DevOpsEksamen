@@ -39,7 +39,7 @@ resource "aws_iam_policy" "lambda_s3_put_object_policy" {
       {
         Effect   = "Allow"
         Action   = "s3:PutObject"
-        Resource = "arn:aws:s3:::pgr301-couch-explorers/5/generated_images/*" # Replace with your bucket name
+        Resource = "arn:as:s3:::pgr301-couch-explorers/5/generated_images/*" # Replace with your bucket name
       }
     ]
   })
