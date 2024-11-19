@@ -53,7 +53,7 @@ resource "aws_lambda_function" "sofa_image_lambda_function" {
   handler       = "lambda_sqs.lambda_handler"
   runtime       = "python3.9"  # Updated runtime
   role          = aws_iam_role.lambda_exec_role_sofa.arn
-  filename      = "lambda_sqs.zip"
+  filename      = "lambda_sqs2.zip"
   timeout       = "40"
 
   environment {
