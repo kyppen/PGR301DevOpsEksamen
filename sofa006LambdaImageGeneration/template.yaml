@@ -52,4 +52,4 @@ Outputs:
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/generate/"
   SofaImageGenerationFunctionRole:
     Description: "maybe arn"
-    Value: !Getatt SofaImageGenerationFunctionRole.arn
+    Value: !GetAtt SofaImageGenerationFunctionRole.arn
