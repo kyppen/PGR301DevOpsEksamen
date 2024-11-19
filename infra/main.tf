@@ -39,7 +39,7 @@ resource "aws_iam_policy" "lambda_s3_put_object_policy" {
       {
         Effect   = "Allow"
         Action   = "s3:PutObject"
-        Resource = "arn:as:s3:::pgr301-couch-explorers/5/generated_images/*" # Replace with your bucket name
+        Resource = "arn:aws:s3:::pgr301-couch-explorers/5/generated_images/*" # Replace with your bucket name
       }
     ]
   })
@@ -63,7 +63,7 @@ resource "aws_iam_policy" "lambda_bedrock_custom_policy" {
         Action   = [
           "bedrock:InvokeModel"
         ]
-        Resource = "arn:as:bedrock:us-east-1:244530008913:foundation-model/amazon.titan-image-generator-v1"                    
+        Resource = "arn:aws:bedrock:us-east-1:244530008913:foundation-model/amazon.titan-image-generator-v1"                    
       }
     ]
   })
