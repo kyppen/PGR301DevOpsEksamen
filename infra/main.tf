@@ -29,12 +29,27 @@ resource "aws_iam_role" "lambda_exec_role_sofa" {
   })
 }
 
+resource "aws_iam_policy" "lambda_s3_put_object_policy" {
+  name        = "lambda_s3_put_object_policy"
+  description = "Allows Lambda to put objects in S3 only"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect   = "Allow"
+        Action   = "s3:PutObject"
+        Resource = "arn:aws:s3:::pgr301-couch-explorers/5/generated_images/*" # Replace with your bucket name
+      }
+    ]
+  })
+}
+
 resource "aws_iam_policy_attachment" "lambda_s3_policy_attach" {
   name       = "lambda_s3_policy_attach"
   roles      = [aws_iam_role.lambda_exec_role_sofa.name]
-  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+  policy_arn = aws_iam_policy.lambda_s3_put_object_policy.arn
 }
-
 # Just giving bedrock access to everything
 resource "aws_iam_policy_attachment" "lambda_bedrock_policy_attach" {
   name       = "lambda_bedrock_policy_attach"
