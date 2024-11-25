@@ -8,9 +8,9 @@ HTTP post endpunkt
 {
     "prompt": "man in the bushes of love"
 }    
-```
-workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880** 
 
+workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880** 
+```
 Oppgave 2:  
 ```
 **https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
