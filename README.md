@@ -12,7 +12,7 @@ HTTP post endpunkt
 workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880** 
 
 Oppgave 2:  
-
+```
 **https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
 
 Can be tested with:  
@@ -21,9 +21,9 @@ Can be tested with:
 branch workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008115825/job/33470100234  
 merged branch into main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008166005
 direct push to main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008202758v
-
+```
 Oppgave 3:  
-
+```
 Metode for tag generering:  
 **rev=$(git rev-parse --short HEAD)**  
 https://github.com/glennbechdevops/spring-docker-dockerhub  
@@ -33,6 +33,7 @@ SQS_QUEUE_URL:
 **https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
 Docker_Image:  
 **kyppen/sofasqsqueue:76e2811**  
+```
 
 Oppgave 4:
 
