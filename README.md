@@ -42,20 +42,20 @@ Det var ikke noe krav for dokumentasjon på denne oppgaven
 
 
 
-1: Automatisering og kontinuerlig levering (CI/CD): Hvordan påvirker serverless-arkitektur sammenlignet med mikrotjenestearkitektur CI/CD-pipelines, automatisering, og utrullingsstrategier?
+**1: Automatisering og kontinuerlig levering (CI/CD): Hvordan påvirker serverless-arkitektur sammenlignet med mikrotjenestearkitektur CI/CD-pipelines, automatisering, og utrullingsstrategier?**
 
 Mikrotjeneste og serverless prøver å løse det samme problemet, hvordan et program splittes opp i mindre deler, skalerer og utvikles. En mikrotjeneste har mer ansvar og mer funksjonalitet enn en FaaS komponent. Dette gjør at hver mikrotjeneste krever konfigurering av OS og teknologiene som er brukt. Med en serverless arkitektur vil CSP håndtere alt av maskinvare og sikkerhetsoppdateringer. Dette frigjør utviklere til å sette søkelys på business logikken. 
 
 I utrullingen av FaaS vil et program som terraform ofte brukes, dette gjør det mulig å lagre infrastrukturen som kode. Med en Serverless arkitektur så betaler man for å kjøre tiden som brukes, altså man kjører ikke sin egen server. dette gjør utrulling av endringer mye raskere. 
 
 I en mikrotjeneste arkitektur så bygges hver tjeneste til en container som kan rulles ut via kubernetes. Dette krever konfigurasjon for skalering som automatisk setter opp flere tjenester der flaskehals oppstår. I en FaaS løsning kan hver komponent av systemet skalere individuelt av hverandre. 
-2: Observability (overvåkning): Hvordan endres overvåkning, logging og feilsøking når man går fra mikrotjenester til en serverless arkitektur? Hvilke utfordringer er spesifikke for observability i en FaaS-arkitektur?
+**2: Observability (overvåkning): Hvordan endres overvåkning, logging og feilsøking når man går fra mikrotjenester til en serverless arkitektur? Hvilke utfordringer er spesifikke for observability i en FaaS-arkitektur?**
 
 Siden en mikrotjeneste er designet for å kjøre over lengre perioder er det naturlig å kontinuerlig logge. Dette gjøres som oftest ved å samle loggene i en tjeneste med en logging teknologi-stack som ELK. I en serverless arkitektur vil en Faas funksjon bare kjøre når den blir kallet, og derfor kan man ikke hente data kontinuerlig. Dette gjør at loggingen vil bli gjort i antall funksjonskall og kjøretid per funksjon.  
 
 Mengden komponenter i et serverless prosjekt gjør at feilsøking blir vanskeligere. Lange pipelines og mange små deler, gjør det vanskeligere å få en god oversikt over systemet. Dette krever god konfigurasjon av verktøy som cloudwatch og X-ray for å motvirke. X-ray lar utvikler spore forespørsler som går igjennom systemet, dette hjelper med å identifisere feil i arbeidsflyten. 
 
-3: Skalerbarhet og kostnadskontroll: Diskuter fordeler og ulemper med tanke på skalerbarhet, ressursutnyttelse, og kostnadsoptimalisering i en serverless kontra mikrotjenestebasert arkitektur.
+**3: Skalerbarhet og kostnadskontroll: Diskuter fordeler og ulemper med tanke på skalerbarhet, ressursutnyttelse, og kostnadsoptimalisering i en serverless kontra mikrotjenestebasert arkitektur.**
 
 Med en mikrotjeneste-arkitektur vil kostnadene være mer forutsigbare enn med en serverless modell, der man betaler basert på faktisk bruk. Serverless er spesielt nyttig dersom tjenesten ikke brukes kontinuerlig, siden man unngår å betale for en inaktiv server. Kostnadene i serverless kan også bli uforutsigbare ved dårlig konfigurasjon eller under perioder med høy belastning. 
 
@@ -63,7 +63,7 @@ I en serverless applikasjon kjører alle deler av systemet uavhengig av hverandr
 
 Mikrotjeneste har forhåndsdefinerte ressurser, noe som gjør at de ikke kan tilpasse seg dynamisk. Serverless funksjoner, derimot, bruker bare ressursene funksjonen trenger for å kjøre, dette fører til langt mer optimalisert ressursbruk.  
  
-4: Eierskap og ansvar: Hvordan påvirkes DevOps-teamets eierskap og ansvar for applikasjonens ytelse, pålitelighet og kostnader ved overgang til en serverless tilnærming sammenlignet med en mikrotjeneste-tilnærming?
+**4: Eierskap og ansvar: Hvordan påvirkes DevOps-teamets eierskap og ansvar for applikasjonens ytelse, pålitelighet og kostnader ved overgang til en serverless tilnærming sammenlignet med en mikrotjeneste-tilnærming?**
 
 I en mikrotjeneste arkitektur så vil teamet har full kontroll over infrastruktur og skalering. Dette innebærer vedlikehold av systemet som sikkerhetsoppdateringer. Siden et serverless prosjekt kjører via en CSP, så tar leverandøren over all skalering, sikkerhet og vedlikehold. Dette gjør at utviklere i serverless har mindre helhetlig kontroll over systemet.  
 
