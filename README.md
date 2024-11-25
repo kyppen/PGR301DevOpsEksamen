@@ -38,7 +38,7 @@ kyppen/sofasqsqueue:76e2811
 Det var ikke noe krav for dokumentasjon på denne oppgaven
 
 
-Oppgave 5. Serverless, Function as a service vs Container-teknologi
+### Oppgave 5:
 
 
 
