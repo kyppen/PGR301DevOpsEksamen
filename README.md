@@ -48,7 +48,7 @@ Mikrotjeneste og serverless prøver å løse det samme problemet, hvordan et pro
 
 I utrullingen av FaaS vil et program som terraform ofte brukes, dette gjør det mulig å lagre infrastrukturen som kode. Med en Serverless arkitektur så betaler man for å kjøre tiden som brukes, altså man kjører ikke sin egen server. dette gjør utrulling av endringer mye raskere. 
 
-I en mikrotjeneste arkitektur så bygges hver tjeneste til en container som kan rulles ut via kubernetes. Dette krever konfigurasjon for skalering som automatisk setter opp flere tjenester der flaskehals oppstår. I en FaaS løsning kan hver komponent av systemet skalere individuelt av hverandre. 
+I en mikrotjeneste arkitektur så bygges hver tjeneste til en container som kan rulles ut via kubernetes. Dette krever konfigurasjon for skalering som automatisk setter opp flere tjenester der flaskehals oppstår. I en FaaS løsning kan hver komponent av systemet skalere individuelt av hverandre.  
 **2: Observability (overvåkning): Hvordan endres overvåkning, logging og feilsøking når man går fra mikrotjenester til en serverless arkitektur? Hvilke utfordringer er spesifikke for observability i en FaaS-arkitektur?**  
 
 Siden en mikrotjeneste er designet for å kjøre over lengre perioder er det naturlig å kontinuerlig logge. Dette gjøres som oftest ved å samle loggene i en tjeneste med en logging teknologi-stack som ELK. I en serverless arkitektur vil en Faas funksjon bare kjøre når den blir kallet, og derfor kan man ikke hente data kontinuerlig. Dette gjør at loggingen vil bli gjort i antall funksjonskall og kjøretid per funksjon.  
