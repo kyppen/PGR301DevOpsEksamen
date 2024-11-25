@@ -1,5 +1,5 @@
 
-Oppgave 1:  
+### Oppgave 1:  
 ```
 HTTP post endpunkt  
 **https://cd0auv7ta5.execute-api.eu-west-1.amazonaws.com/Prod/generate/**  
@@ -9,7 +9,7 @@ HTTP post endpunkt
 
 workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880 
 ```
-Oppgave 2:  
+### Oppgave 2:  
 ```
 **https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
 
@@ -20,7 +20,7 @@ branch workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/1200
 merged branch into main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008166005
 direct push to main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008202758v
 ```
-###Oppgave 3:  
+### Oppgave 3:  
 ```
 Metode for tag generering:  
 rev=$(git rev-parse --short HEAD)  
