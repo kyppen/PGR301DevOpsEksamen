@@ -7,33 +7,33 @@ HTTP post endpunkt
     "prompt": "man in the bushes of love"
 }    
 
-workflow: **https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880** 
+workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/11915086655/job/33204512880 
 ```
 Oppgave 2:  
 ```
 **https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
 
 Can be tested with:  
-**aws sqs send-message --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue --message-body "cowboy"**  
+aws sqs send-message --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue --message-body "cowboy"  
 
 branch workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008115825/job/33470100234  
 merged branch into main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008166005
 direct push to main workflow: https://github.com/kyppen/PGR301DevOpsEksamen/actions/runs/12008202758v
 ```
-Oppgave 3:  
+###Oppgave 3:  
 ```
 Metode for tag generering:  
-**rev=$(git rev-parse --short HEAD)**  
+rev=$(git rev-parse --short HEAD)  
 https://github.com/glennbechdevops/spring-docker-dockerhub  
 Methoden gjorde det enkelt å få unike tagger på alle images som ble lastet opp
 
 SQS_QUEUE_URL:  
-**https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue**  
+https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue 
 Docker_Image:  
-**kyppen/sofasqsqueue:76e2811**  
+kyppen/sofasqsqueue:76e2811 
 ```
 
-## Oppgave 4:
+### Oppgave 4:
 
 Det var ikke noe krav for dokumentasjon på denne oppgaven
 
