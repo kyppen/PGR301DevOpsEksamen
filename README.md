@@ -39,7 +39,7 @@ Alarm is called Sofa_alar
 
 
 Oppgave 5. Serverless, Function as a service vs Container-teknologi
-
+```
 
 1: Automatisering og kontinuerlig levering (CI/CD): Hvordan påvirker serverless-arkitektur sammenlignet med mikrotjenestearkitektur CI/CD-pipelines, automatisering, og utrullingsstrategier?
 
@@ -70,7 +70,7 @@ Påliteligheten i et mikrotjenestesystem vil komme fra utvikleren sin konfiguras
 
 Kostnader i et mikrotjenesteprosjekt vil kommer fra hosting av serverkostnader. Dette vil gi et mer stabilt og forutsigbare kostnader fordi tjenestene kjøres kontinuerlig. Serverless vil ha mer uforutsigbare kostnader, CSP vil fakturer basert på antar millisekunder av prosesseringstid du bruker. Kostnadskontroll vil dermed sette søkelys på å effektivisere kjøre tiden på funksjonene, kortere kjøretid betyr mindre kostnader. Et av kostnadene som kan komme med mikrotjenester er nedetid grunnet feil konfigurasjon, det er et problem teamet ikke vil ha med serverless. 
  
-
+```
  
  
 
