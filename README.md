@@ -33,9 +33,9 @@ Docker_Image:
 **kyppen/sofasqsqueue:76e2811**  
 ```
 
-Oppgave 4:
+## Oppgave 4:
 
-Alarm is called Sofa_alar
+Det var ikke noe krav for dokumentasjon på denne oppgaven
 
 
 Oppgave 5. Serverless, Function as a service vs Container-teknologi
