@@ -29,8 +29,10 @@ Methoden gjorde det enkelt å få unike tagger på alle images som ble lastet op
 
 SQS_QUEUE_URL:  
 https://sqs.eu-west-1.amazonaws.com/244530008913/sofa_image_queue 
-Docker_Image:  
-kyppen/sofasqsqueue:76e2811 
+Docker_Image that adds 10x images requests to trigger alarm:  
+kyppen/sofasqsqueue:76e2811
+Docker_Image that adds 1 image to the queue:  
+kyppen/sofasqsqueue:e0346b9
 ```
 
 ### Oppgave 4:
