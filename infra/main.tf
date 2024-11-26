@@ -63,7 +63,7 @@ resource "aws_iam_policy" "lambda_bedrock_custom_policy" {
         Action   = [
           "bedrock:InvokeModel"
         ]
-        Resource = "arn:aws:bedrock:us-east-1:244530008913:foundation-model/amazon.titan-image-generator-v1"                    
+        Resource = "*"                    
       }
     ]
   })
