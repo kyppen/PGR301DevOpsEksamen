@@ -40,8 +40,10 @@ kyppen/sofasqsqueue:e0346b9
 Det var ikke noe krav for dokumentasjon på denne oppgaven
 Alarm som ble satt opp: sofa_alarm
 Jeg vet ikke hvorfor men dette fungerte når jeg testet det sist, anner ikke hva som er forskjellig. Når jeg skulle se over så står bare alarmen konstant på. 
+Dette fungerte helt fint tidligere :(. Har ikke tid til å fikse det nå dessverre, før fristen. Anner ikke hvorfor den har blitt sånn. Kan være noe premissions som har blitt endret mens jeg jobbet på de andre oppgavene.
 
-
+As it works now the SQS queue does get the messages, but nothing gets consumed from the queue. Aka a single message in the queue is enough to trigger the alarm. Using the docker images to add to the queue is will allow it to be triggered. To make the alarm go to OK, i had to purge the queue.
+Im very unsure why this happended.
 
 ### Oppgave 5:
 
