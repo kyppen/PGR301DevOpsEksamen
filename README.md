@@ -39,6 +39,7 @@ kyppen/sofasqsqueue:e0346b9
 
 Det var ikke noe krav for dokumentasjon på denne oppgaven
 Alarm som ble satt opp: sofa_alarm
+Jeg vet ikke hvorfor men dette fungerte når jeg testet det sist, anner ikke hva som er forskjellig. Når jeg skulle se over så står bare alarmen konstant på. 
 
 
 
