@@ -37,9 +37,7 @@ public class SQSClient implements CommandLineRunner {
                 .queueUrl(queueUrl)
                 .messageBody(messageBody)
                 .build();
-        for(int i = 0; i < 10; i++){
-             SendMessageResponse response = sqsClient.sendMessage(sendMessageRequest);
-             System.out.println("Message sent successfully. Message ID: " + response.messageId());
-        }
+        SendMessageResponse response = sqsClient.sendMessage(sendMessageRequest);
+        System.out.println("Message sent successfully. Message ID: " + response.messageId());
     }
 }

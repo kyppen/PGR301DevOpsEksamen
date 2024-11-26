@@ -36,6 +36,8 @@ kyppen/sofasqsqueue:76e2811
 ### Oppgave 4:
 
 Det var ikke noe krav for dokumentasjon på denne oppgaven
+Alarm som ble satt opp: sofa_alarm
+
 
 
 ### Oppgave 5:
